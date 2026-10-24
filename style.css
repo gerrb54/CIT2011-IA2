@@ -1,0 +1,260 @@
+:root {
+  --ink:#f8f5ff;
+  --muted:#c9c3df;
+  --accent:#f57463;
+  --border:#9b92b3;
+  --error:#ff9387
+}
+* {
+  box-sizing:border-box
+}
+body {
+  margin:0;
+  min-height:100vh;
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  background:#160d35 url('../assets/images/background-desktop.png') center/cover fixed
+}
+a {
+  color:inherit
+}
+a:focus-visible,button:focus-visible,input:focus-visible {
+  outline:3px solid #ffbba8;
+  outline-offset:3px
+}
+header {
+  padding:35px 20px 12px;
+  text-align:center
+}
+.logo {
+  width:200px;
+  max-width:65%
+}
+main {
+  max-width:850px;
+  margin:0 auto;
+  padding:22px 20px 70px;
+  text-align:center
+}
+h1 {
+  font-size:clamp(2.2rem,5.6vw,3.7rem);
+  line-height:1.13;
+  margin:20px auto 22px;
+  max-width:820px;
+  letter-spacing:-1px
+}
+h1 em {
+  font-style:normal;
+  background:linear-gradient(90deg,#f6b89d,#f57463);
+  background-clip:text;
+  color:transparent
+}
+p {
+  color:var(--muted);
+  line-height:1.65
+}
+.lead {
+  font-size:1.1rem;
+  max-width:620px;
+  margin:0 auto 32px
+}
+.primary {
+  display:inline-block;
+  border:0;
+  border-radius:10px;
+  background:var(--accent);
+  color:#1a1037;
+  padding:16px 25px;
+  font-size:1rem;
+  font-weight:800;
+  text-decoration:none;
+  cursor:pointer;
+  box-shadow:0 5px 0 #9c3b45;
+  transition:transform .15s,filter .15s
+}
+.primary:hover {
+  filter:brightness(1.12);
+  transform:translateY(-2px)
+}
+.details {
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+  margin:28px auto
+}
+.detail {
+  padding:16px 24px;
+  border:1px solid #827b9c;
+  border-radius:12px;
+  background:#ffffff0c
+}
+.detail strong {
+  display:block;
+  margin-top:6px
+}
+.eyebrow {
+  color:#ffad9c;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-size:.8rem
+}
+.form-wrap {
+  max-width:480px;
+  margin:0 auto;
+  text-align:left
+}
+.form-wrap h1,.form-wrap>.lead {
+  text-align:center
+}
+.field {
+  margin:0 0 21px
+}
+.field label {
+  display:block;
+  font-size:.95rem;
+  margin-bottom:10px
+}
+.field input {
+  width:100%;
+  border:1px solid #aca4c4;
+  border-radius:10px;
+  padding:15px 16px;
+  background:#ffffff0c;
+  color:white;
+  font:inherit
+}
+.field input::placeholder {
+  color:#aaa5c1
+}
+.field input[type=file] {
+  padding:13px
+}
+.hint {
+  font-size:.82rem;
+  margin:7px 0;
+  color:var(--muted)
+}
+.error {
+  min-height:1.2em;
+  color:var(--error);
+  font-size:.83rem;
+  margin:5px 0
+}
+.field input[aria-invalid=true] {
+  border:2px solid var(--error)
+}
+.wide {
+  width:100%
+}
+.ticket {
+  position:relative;
+  overflow:hidden;
+  text-align:left;
+  max-width:620px;
+  margin:38px auto 25px;
+  border:1px solid #ffffff70;
+  border-radius:20px;
+  background:linear-gradient(120deg,#ffffff25,#ffffff0c);
+  backdrop-filter:blur(15px);
+  box-shadow:0 24px 65px #08051d90
+}
+.ticket-top {
+  padding:26px 30px 32px;
+  min-height:175px;
+  background:url('../assets/images/pattern-ticket.svg') right center/auto 100% no-repeat
+}
+.ticket-brand {
+  display:flex;
+  align-items:center;
+  gap:13px;
+  font-size:1.65rem;
+  font-weight:800
+}
+.ticket-brand img {
+  width:38px
+}
+.ticket-date {
+  margin:10px 0 0 52px;
+  color:#e1dced
+}
+.ticket-bottom {
+  border-top:2px dashed #bdb2d3;
+  padding:22px 30px;
+  display:flex;
+  align-items:center;
+  gap:15px
+}
+.avatar {
+  width:66px;
+  height:66px;
+  object-fit:cover;
+  border-radius:12px
+}
+.attendee {
+  min-width:0;
+  flex:1
+}
+.attendee strong {
+  font-size:1.3rem;
+  overflow-wrap:anywhere
+}
+.attendee p {
+  margin:7px 0 0;
+  overflow-wrap:anywhere
+}
+.attendee a {
+  color:#f4b7a6
+}
+.serial {
+  font-size:.83rem;
+  color:#c9c3df;
+  writing-mode:vertical-rl
+}
+.back {
+  display:inline-block;
+  margin:20px auto;
+  color:#e5dff5
+}
+footer {
+  text-align:center;
+  padding:15px 20px 25px;
+  color:#aca5c5;
+  font-size:.8rem
+}
+@media(max-width:600px) {
+  body {
+    background-image:url('../assets/images/background-mobile.png')
+  }
+  header {
+    padding-top:24px
+  }
+  main {
+    padding:12px 20px 50px
+  }
+  .ticket-top {
+    padding:22px 20px
+  }
+  .ticket-bottom {
+    padding:20px 16px
+  }
+  .ticket-brand {
+    font-size:1.3rem
+  }
+  .ticket-date {
+    margin-left:49px
+  }
+  .avatar {
+    width:54px;
+    height:54px
+  }
+  .attendee strong {
+    font-size:1.05rem
+  }
+}
+@media(min-width:601px) and (max-width:900px) {
+  body {
+    background-image:url('../assets/images/background-tablet.png')
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Coding Conf | Register
+  </title>
+  <link href="css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <nav aria-label="Main navigation">
+    <a href="index.html">
+     <img alt="Coding Conf home" class="logo" src="assets/images/logo-full.svg"/>
+    </a>
+   </nav>
+  </header>
+  <main>
+   <section class="form-wrap">
+    <h1>
+     Your journey to Coding Conf 2026 starts here!
+    </h1>
+    <p class="lead">
+     Secure your spot at this year's biggest coding conference.
+    </p>
+    <form id="registration" novalidate="">
+     <div class="field">
+      <label for="avatar">
+       Upload Avatar
+      </label>
+      <input accept="image/jpeg,image/png" aria-describedby="avatar-hint avatar-error" id="avatar" type="file"/>
+      <p class="hint" id="avatar-hint">
+       JPEG or PNG · Maximum 500 KB
+      </p>
+      <p aria-live="polite" class="error" id="avatar-error">
+      </p>
+     </div>
+     <div class="field">
+      <label for="name">
+       Full Name
+      </label>
+      <input aria-describedby="name-error" autocomplete="name" id="name" name="name" placeholder="Your full name"/>
+      <p aria-live="polite" class="error" id="name-error">
+      </p>
+     </div>
+     <div class="field">
+      <label for="email">
+       Email Address
+      </label>
+      <input aria-describedby="email-error" autocomplete="email" id="email" name="email" placeholder="example@email.com" type="email"/>
+      <p aria-live="polite" class="error" id="email-error">
+      </p>
+     </div>
+     <div class="field">
+      <label for="github">
+       GitHub Username
+      </label>
+      <input aria-describedby="github-error" id="github" name="github" placeholder="@yourusername"/>
+      <p aria-live="polite" class="error" id="github-error">
+      </p>
+     </div>
+     <button class="primary wide" type="submit">
+      Generate My Ticket
+     </button>
+    </form>
+    <a class="back" href="index.html">
+     ← Back to home
+    </a>
+   </section>
+  </main>
+  <footer>
+   Coding Conf · October 26, 2026
+  </footer>
+  <script src="js/validation.js">
+  </script>
+ </body>
+</html>
+
