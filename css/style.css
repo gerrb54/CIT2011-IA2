@@ -1,3 +1,4 @@
+/* Shared theme colours used throughout the website. */
 :root {
   --ink:#f8f5ff;
   --muted:#c9c3df;
@@ -5,6 +6,7 @@
   --border:#9b92b3;
   --error:#ff9387
 }
+/* Include padding and borders in element widths. */
 * {
   box-sizing:border-box
 }
@@ -18,10 +20,12 @@ body {
 a {
   color:inherit
 }
+/* Keep keyboard focus clearly visible on links, buttons and inputs. */
 a:focus-visible,button:focus-visible,input:focus-visible {
   outline:3px solid #ffbba8;
   outline-offset:3px
 }
+/* Shared page structure and logo. */
 header {
   padding:35px 20px 12px;
   text-align:center
@@ -36,6 +40,7 @@ main {
   padding:22px 20px 70px;
   text-align:center
 }
+/* Scale headings with the viewport while keeping readable size limits. */
 h1 {
   font-size:clamp(2.2rem,5.6vw,3.7rem);
   line-height:1.13;
@@ -58,6 +63,7 @@ p {
   max-width:620px;
   margin:0 auto 32px
 }
+/* Primary buttons share the same appearance and hover transition. */
 .primary {
   display:inline-block;
   border:0;
@@ -76,6 +82,7 @@ p {
   filter:brightness(1.12);
   transform:translateY(-2px)
 }
+/* Allow event information cards to wrap when space is limited. */
 .details {
   display:flex;
   justify-content:center;
@@ -100,6 +107,7 @@ p {
   text-transform:uppercase;
   font-size:.8rem
 }
+/* Keep the registration form centered and readable on wide screens. */
 .form-wrap {
   max-width:480px;
   margin:0 auto;
@@ -136,6 +144,7 @@ p {
   margin:7px 0;
   color:var(--muted)
 }
+/* Reserve room for validation feedback and highlight invalid fields. */
 .error {
   min-height:1.2em;
   color:var(--error);
@@ -148,6 +157,7 @@ p {
 .wide {
   width:100%
 }
+/* A translucent background and blur create the glass ticket effect. */
 .ticket {
   position:relative;
   overflow:hidden;
@@ -179,6 +189,7 @@ p {
   margin:10px 0 0 52px;
   color:#e1dced
 }
+/* Arrange the uploaded avatar, attendee details and serial in one row. */
 .ticket-bottom {
   border-top:2px dashed #bdb2d3;
   padding:22px 30px;
@@ -223,6 +234,7 @@ footer {
   color:#aca5c5;
   font-size:.8rem
 }
+/* Phone layout: reduce ticket spacing and use the mobile background. */
 @media(max-width:600px) {
   body {
     background-image:url('../assets/images/background-mobile.png')
@@ -253,6 +265,7 @@ footer {
     font-size:1.05rem
   }
 }
+/* Tablet-sized viewports use the supplied tablet background. */
 @media(min-width:601px) and (max-width:900px) {
   body {
     background-image:url('../assets/images/background-tablet.png')
