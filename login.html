@@ -6,9 +6,11 @@
   <title>
    Coding Conf | Register
   </title>
+  <!-- All three pages share the same stylesheet. -->
   <link href="css/style.css" rel="stylesheet"/>
  </head>
  <body>
+  <!-- The logo links back to the home page from every page. -->
   <header>
    <nav aria-label="Main navigation">
     <a href="index.html">
@@ -24,6 +26,7 @@
     <p class="lead">
      Secure your spot at this year's biggest coding conference.
     </p>
+    <!-- JavaScript handles validation so errors can appear beside each field. -->
     <form id="registration" novalidate="">
      <div class="field">
       <label for="avatar">
@@ -33,6 +36,7 @@
       <p class="hint" id="avatar-hint">
        JPEG or PNG · Maximum 500 KB
       </p>
+      <!-- Each error message is linked to its input and announced when updated. -->
       <p aria-live="polite" class="error" id="avatar-error">
       </p>
      </div>
@@ -72,6 +76,7 @@
   <footer>
    Coding Conf · October 26, 2026
   </footer>
+  <!-- Load after the form so its elements are available to the script. -->
   <script src="js/validation.js">
   </script>
  </body>
