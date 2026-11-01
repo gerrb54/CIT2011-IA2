@@ -6,9 +6,11 @@
   <title>
    Coding Conf | Your Ticket
   </title>
+  <!-- All three pages share the same stylesheet. -->
   <link href="css/style.css" rel="stylesheet"/>
  </head>
  <body>
+  <!-- The logo links back to the home page from every page. -->
   <header>
    <nav aria-label="Main navigation">
     <a href="index.html">
@@ -29,9 +31,11 @@
     <p class="lead">
      We've reserved your place at Coding Conf 2026. We can't wait to see you there!
     </p>
+    <!-- ticket.js fills the empty attendee elements from sessionStorage. -->
     <article aria-label="Your conference ticket" class="ticket">
      <div class="ticket-top">
       <div class="ticket-brand">
+       <!-- Decorative icon: the event name is already written beside it. -->
        <img alt="" src="assets/images/logo-mark.svg"/>
        Coding Conf
       </div>
@@ -62,6 +66,7 @@
   <footer>
    Coding Conf · Your adventure begins here.
   </footer>
+  <!-- Populate the ticket or redirect home if registration data is missing. -->
   <script src="js/ticket.js">
   </script>
  </body>
