@@ -21,7 +21,7 @@ a {
   color:inherit
 }
 /* Keep keyboard focus clearly visible on links, buttons and inputs. */
-a:focus-visible,button:focus-visible,input:focus-visible {
+:is(a,button,input):focus-visible {
   outline:3px solid #ffbba8;
   outline-offset:3px
 }
@@ -113,7 +113,7 @@ p {
   margin:0 auto;
   text-align:left
 }
-.form-wrap h1,.form-wrap>.lead {
+.form-wrap > :is(h1,.lead) {
   text-align:center
 }
 .field {
@@ -214,6 +214,14 @@ p {
 .attendee p {
   margin:7px 0 0;
   overflow-wrap:anywhere
+}
+/* Float the GitHub icon beside its profile link and contain the float. */
+.attendee p {
+  display:flow-root
+}
+.attendee p img {
+  float:left;
+  margin:3px 6px 0 0
 }
 .attendee a {
   color:#f4b7a6
